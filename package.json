@@ -40,6 +40,7 @@
     "test": "npm run build && node --expose-gc --trace-gc node_modules/mocha/bin/_mocha -R spec",
     "valgrind": "npm run build && valgrind --leak-check=full --show-possibly-lost=no node --expose-gc --trace-gc node_modules/mocha/bin/_mocha -R spec",
     "build": "node-gyp rebuild",
+    "preinstall": "npm run build",
     "install": "npm run build",
     "lint": "npm run prettier && tslint --format stylish --project .",
     "prettier": "prettier --config node_modules/tslint-lt/.prettierrc.yml --write \"{,!node_modules/}**/*.{ts,tsx,css,scss,html,js,jsx,yml,json}\"",
